@@ -3,6 +3,7 @@
      * More docblock and bug fixes based on phpstan and psalm analysis
      * Fixing coding style using php-cs-fixer so things are more consistent
      * Proper @property annotations in generated models
+     * Fixed #37 - Error with order by and mysql 5.7
 
 2.0.1
 -----
