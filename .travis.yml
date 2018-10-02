@@ -9,7 +9,8 @@ cache:
 
 env:
   global:
-    - COMPOSER_ARGS="" CC_TEST_REPORTER_ID=f424c3957298b215ddff899f624b534dac452ed703b42f70b74188a2edf0b5d0
+    - COMPOSER_ARGS=""
+    - CC_TEST_REPORTER_ID=f424c3957298b215ddff899f624b534dac452ed703b42f70b74188a2edf0b5d0
 
 install:
   - travis_retry composer install --no-interaction --prefer-source $COMPOSER_ARGS
