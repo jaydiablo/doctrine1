@@ -60,12 +60,22 @@ class Doctrine_Cache_Apcu extends Doctrine_Cache_Driver
 
     protected function _doSave($id, $data, $lifeTime = false)
     {
-        return \apcu_store($id, $data, $lifeTime);
+        if ($lifeTime === false) {
+            $lifeTime = 0;
+        }
+
+        /** @var bool $result */
+        $result = \apcu_store($id, $data, $lifeTime);
+
+        return $result;
     }
 
     protected function _doDelete($id)
     {
-        return \apcu_delete($id);
+        /** @var bool $result */
+        $result = \apcu_delete($id);
+
+        return $result;
     }
 
     protected function _getCacheKeys()
