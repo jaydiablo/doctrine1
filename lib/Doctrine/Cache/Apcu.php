@@ -37,7 +37,7 @@ class Doctrine_Cache_Apcu extends Doctrine_Cache_Driver
      *
      * @throws Doctrine_Cache_Exception
      */
-    public function __construct($options = [])
+    public function __construct($options = array())
     {
         if (!\function_exists('apcu_fetch')) {
             throw new Doctrine_Cache_Exception('The apcu extension must be loaded for using this backend !');
@@ -70,8 +70,8 @@ class Doctrine_Cache_Apcu extends Doctrine_Cache_Driver
 
     protected function _getCacheKeys()
     {
-        $ci = \apcu_cache_info();
-        $keys = [];
+        $ci   = \apcu_cache_info();
+        $keys = array();
 
         foreach ($ci['cache_list'] as $entry) {
             $keys[] = $entry['info'];

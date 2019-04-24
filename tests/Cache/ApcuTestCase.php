@@ -38,12 +38,12 @@ class Doctrine_Cache_Apcu_TestCase extends Doctrine_Cache_Abstract_TestCase
     {
         apcu_clear_cache();
     }
-    
+
     protected function _isEnabled()
     {
         return extension_loaded('apcu');
     }
-    
+
     protected function _getCacheDriver()
     {
         return new Doctrine_Cache_Apcu();
