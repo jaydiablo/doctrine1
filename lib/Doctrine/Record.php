@@ -2516,7 +2516,7 @@ abstract class Doctrine_Record extends Doctrine_Record_Abstract implements Count
                 $this,
                 $this->getTable()->getOption('treeImpl'),
                 $this->getTable()->getOption('treeOptions')
-                                              );
+            );
         }
 
         return $this->_node;
